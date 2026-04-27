@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sdchickenkaup.in</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;900&display=swap');
+
+        body {
+            background: radial-gradient(circle at top, #cc0000 0%, #4a0000 100%);
+            font-family: 'Outfit', sans-serif;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 40px;
+        }
+
+        .call-btn {
+            background: #ffffff;
+            color: #800000;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .call-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: #ffcc00;
+            color: #000;
+        }
+
+        .status-pill {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Ambient glow animation */
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #ff0000;
+            filter: blur(120px);
+            opacity: 0.2;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col">
+    <div class="glow top-0 left-0"></div>
+    <div class="glow bottom-0 right-0"></div>
+
+    <!--<header class="p-8 flex justify-between items-center" data-aos="fade-down">-->
+    <!--<div class="text-2xl font-black tracking-tighter uppercase italic">SD <span class="text-yellow-400">CHICKEN</span></div>-->
+
+    <nav class="p-8 flex justify-between items-center relative z-10">
+        <div class="text-3xl font-black tracking-tighter uppercase">SD<span class="opacity-50">.</span></div>
+        <div class="text-[10px] font-bold uppercase tracking-[0.5em] border-2 border-white/20 px-4 py-2 rounded-lg">Kaup
+            2026</div>
+    </nav>
+
+    <!--<a href="index.html" class="text-[10px] uppercase font-bold tracking-widest border-b border-white/20 pb-1 hover:border-yellow-400 hover:text-yellow-400 transition">Back to Gallery</a>-->
+    <!--</header>-->
+
+    <main class="flex-grow flex items-center justify-center px-6 py-12">
+        <div class="max-w-xl w-full glass-card p-10 md:p-16 text-center relative overflow-hidden" data-aos="zoom-in">
+
+            <div class="absolute -top-10 -right-10 text-white/5 font-black text-9xl pointer-events-none">SD</div>
+
+            <div class="relative inline-block mb-8">
+                <div class="absolute inset-0 bg-yellow-400 rounded-full blur-lg opacity-20 animate-pulse"></div>
+                <img src="SD Images/sdlogo.jpeg" alt="Logo"
+                    class="relative h-28 w-28 md:h-36 md:w-36 rounded-full object-cover border-2 border-white/20 shadow-2xl">
+            </div>
+
+            <h2 class="text-sm uppercase tracking-[0.5em] text-white/60 mb-2 font-bold" data-aos="fade-up">Direct
+                contact</h2>
+            <h1 class="text-4xl md:text-5xl font-black tracking-tighter mb-6" data-aos="fade-up" data-aos-delay="100">
+                SECURE YOUR <br><span class="text-yellow-400">STOCK.</span>
+            </h1>
+
+            <div id="shop-status-container"
+                class="inline-flex items-center gap-3 px-6 py-2 rounded-full status-pill mb-12" data-aos="fade-up"
+                data-aos-delay="200">
+                <span class="relative flex h-3 w-3">
+                    <span id="ping-color"
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"></span>
+                    <span id="dot-color" class="relative inline-flex rounded-full h-3 w-3"></span>
+                </span>
+                <span id="shop-text" class="text-xs font-bold uppercase tracking-widest">Verifying Shop Status...</span>
+            </div>
+
+            <div class="space-y-6">
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <a href="tel:9632266258"
+                        class="call-btn block w-full py-6 rounded-3xl text-2xl font-black uppercase tracking-tighter flex items-center justify-center gap-4">
+                        <i class="fas fa-phone-alt text-sm"></i>
+                        96322 66258
+                    </a>
+                </div>
+
+                <p class="text-white/40 text-[10px] uppercase tracking-widest font-bold" data-aos="fade-up"
+                    data-aos-delay="400">
+                    Average Response: <span class="text-white">Instant</span> • Open until 8:00 PM
+                </p>
+            </div>
+
+            <div class="mt-16 flex justify-center gap-8 border-t border-white/5 pt-10" data-aos="fade-up"
+                data-aos-delay="500">
+                <a href="https://chat.whatsapp.com/DdRZbtALTew3p4okY7Wsw0"
+                    class="text-white/40 hover:text-green-400 transition-all scale-110"><i
+                        class="fab fa-whatsapp text-2xl"></i></a>
+                <a href="https://www.instagram.com/sd_chicken_kaup"
+                    class="text-white/40 hover:text-pink-400 transition-all scale-110"><i
+                        class="fab fa-instagram text-2xl"></i></a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Fish+Market+Kaup"
+                    class="text-white/40 hover:text-blue-400 transition-all scale-110"><i
+                        class="fas fa-map-marker-alt text-2xl"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="p-8 text-center border-t border-white/5">
+        <p class="text-[9px] text-white/20 uppercase tracking-[1em]">&copy; 2026 SD CHICKEN KAUP</p>
+        <br>
+        <p class="text-xs text-white/40">
+            Developed with ❤️ by <a href="https://www.instagram.com/adishe77y?igsh=cDN5c2NxNzVneG8w"
+                class="hover:text-yellow-400 transition-colors">adishe77y</a>
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        function updateShopStatus() {
+            const now = new Date();
+            const hours = now.getHours() + (now.getMinutes() / 60);
+            const openTime = 7.5;
+            const closeTime = 20;
+
+            const textEl = document.getElementById('shop-text');
+            const dotEl = document.getElementById('dot-color');
+            const pingEl = document.getElementById('ping-color');
+
+            if (hours >= openTime && hours < closeTime) {
+                textEl.innerText = "Shop is Open Now";
+                textEl.style.color = "#4ade80"; // Green-400
+                dotEl.className = "relative inline-flex rounded-full h-3 w-3 bg-green-500";
+                pingEl.className = "animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-green-400";
+            } else {
+                textEl.innerText = "Closed - Opens 7:30 AM";
+                textEl.style.color = "#f87171"; // Red-400
+                dotEl.className = "relative inline-flex rounded-full h-3 w-3 bg-red-500";
+                pingEl.className = "hidden";
+            }
+        }
+        updateShopStatus();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sdchickenkaup.in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- Animations --- */
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* --- Global Styles --- */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    background: #fdfdfd;
+    color: #2c3e50;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.hero-banner {
+    background: linear-gradient(135deg, #b30000 0%, #7a0000 100%);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px 0 20px; /* Added side padding */
+    color: white;
+    text-align: center;
+}
+
+.hero-banner h1 {
+    font-size: clamp(2rem, 8vw, 3rem); /* Adjusts size based on screen */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0;
+    animation: slideInUp 1s ease-out;
+}
+
+.content-wrapper {
+    width: 90%; /* Uses 90% of screen width on mobile */
+    max-width: 950px; /* Won't grow larger than 950px on laptop */
+    margin: -180px auto 50px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    padding: 40px 20px; /* Reduced side padding for mobile */
+    position: relative;
+    z-index: 10;
+    animation: scaleIn 1.2s ease-out;
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+.main-photo-container {
+    text-align: center;
+    margin-top: -160px;
+}
+
+.grandfather-photo {
+    width: 100%; /* Fluid width */
+    max-width: 350px; /* Maximum size for desktop */
+    height: auto; /* Keeps aspect ratio */
+    aspect-ratio: 1 / 1; /* Keeps it a perfect circle */
+    border-radius: 50%;
+    border: 10px solid white; /* Slightly thinner for mobile */
+    box-shadow: 0 15px 45px rgba(212, 175, 55, 0.4);
+    object-fit: cover;
+    background: white;
+}
+
+.name-heading {
+    color: #b30000;
+    font-size: clamp(1.8rem, 6vw, 3rem); /* Responsive font */
+    margin: 25px 0 5px 0;
+    font-weight: bold;
+}
+
+.story-content {
+    text-align: center;
+    line-height: 1.8;
+    font-size: clamp(1rem, 4vw, 1.25rem); /* Responsive font */
+    padding: 0 10px; /* Less padding on sides for mobile */
+    margin-bottom: 50px;
+}
+
+/* --- Responsive Media Query --- */
+@media (max-width: 768px) {
+    .legacy-anchor { 
+        flex-direction: column; 
+        text-align: center;
+        padding: 20px;
+    }
+    .son-photo { 
+        margin-right: 0; 
+        margin-bottom: 20px;
+        width: 150px;
+        height: 150px;
+    }
+    .hero-banner {
+        height: 300px; /* Shorter banner on mobile */
+    }
+    .content-wrapper {
+        margin-top: -100px; /* Adjust overlap for mobile */
+    }
+}
+
+        /* --- CLICKABLE IMAGES --- */
+        .clickable {
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .clickable:hover {
+            opacity: 0.9;
+        }
+
+        .main-photo-container {
+            text-align: center;
+            margin-top: -160px;
+        }
+
+        .grandfather-photo {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 15px solid white;
+            box-shadow: 0 15px 45px rgba(212, 175, 55, 0.4);
+            object-fit: cover;
+            background: white;
+        }
+
+        .name-heading {
+            color: #b30000;
+            font-size: 3rem;
+            margin: 25px 0 5px 0;
+            font-weight: bold;
+        }
+
+        /* --- UPDATED HERITAGE TAG --- */
+        .heritage-tag {
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.75rem; /* Small size */
+            font-weight: 600;
+            opacity: 0.85;
+            display: block; /* Ensures it sits on its own line */
+            margin: 2px 0 10px 0; /* Tight spacing to the name */
+        }
+
+        /* Centering the tag specifically for the son's section */
+        .son-text .heritage-tag {
+            text-align: center; 
+            width: 100%;
+        }
+
+        .dates-minimal {
+            font-family: 'Inter', sans-serif;
+            color: #2c3e50;
+            opacity: 0.5;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            margin-top: 12px;
+            display: block;
+            font-weight: 300;
+        }
+
+        .divider {
+            height: 3px;
+            width: 80px;
+            background: #b30000;
+            margin: 40px auto;
+        }
+
+        .story-content {
+            text-align: center;
+            line-height: 2;
+            font-size: 1.25rem;
+            color: #444;
+            padding: 0 50px;
+            margin-bottom: 50px;
+        }
+
+        .legacy-anchor {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fafafa;
+            border-radius: 20px;
+            border-left: 10px solid #b30000;
+        }
+
+        .son-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-right: 30px;
+        }
+
+        .son-text {
+            text-align: center; /* Centering the text group next to the photo */
+            flex-grow: 1; /* Helps with centering within the flex box */
+        }
+
+        .son-name {
+            color: #b30000;
+            font-size: 2rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .son-text p.vision-text {
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+            color: #b30000;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- LIGHTBOX STYLES --- */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 80%;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #b30000;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.3s;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .legacy-anchor { flex-direction: column; }
+            .son-photo { margin-right: 0; margin-bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-banner">
+        <h1>Our Legacy</h1>
+    </section>
+
+    <div class="content-wrapper">
+        <div class="main-photo-container">
+            <img src="SD Images/dodapa.jpg.jpeg" alt="Shri Harish Shetty" class="grandfather-photo clickable" onclick="openImage(this.src)">
+            <div class="name-heading">Shri Harish Shetty</div>
+            <div class="heritage-tag">* Adve Kankanaguttu *</div>
+            <span class="dates-minimal">06.04.1957 — 09.08.2020</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="story-content">
+            <p>
+                "My grandfather was the pillar of our foundation—a man whose wisdom and 
+                kindness carved the path we walk today. He lived with a rare courage, 
+                proving that honesty is the greatest profit one can earn in life."
+            </p>
+        </div>
+
+        <div class="legacy-anchor">
+            <img src="SD Images/annu.jpg.jpeg" alt="Shri Ashrith Shetty" class="son-photo clickable" onclick="openImage(this.src)">
+            <div class="son-text">
+                <div class="son-name">Shri Ashrith Shetty</div>
+                <div class="heritage-tag">* Adve Kankanaguttu *</div>
+                <p class="vision-text">Continuing the Vision</p>
+                <div style="font-family: Georgia; color: #666; font-style: italic; margin-top: 10px; font-size: 0.95rem;">
+                    "Taking forward the values of quality and trust established by our founder."
+                </div>
+            </div>
+        </div>
+
+        <div class="story-content" style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 30px;">
+            <p>
+                His spirit continues to guide every decision we make at SD Chicken. 
+                Through this page, we honor a life beautifully lived and a heritage 
+                that remains the heartbeat of our family.
+            </p>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox-overlay" onclick="closeImage()">
+        <img id="fullImage" class="lightbox-img" src="" onclick="event.stopPropagation()">
+        <button class="back-btn" onclick="closeImage()">← Back</button>
+    </div>
+
+    <footer>
+        &copy; 2026 SD CHICKEN | In Loving Memory of Shri Harish Shetty
+    </footer>
+
+    <script>
+        function openImage(src) {
+            document.getElementById('fullImage').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImage() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sdchickenkaup.in</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Deep Red Background */
+        body { background-color: #b30000; color: white; overflow-x: hidden; }
+        
+        /* White Card Style */
+        .gallery-card {
+            background-color: white;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-card img {
+            transition: transform 0.8s ease;
+            filter: grayscale(20%); /* Gives a classic heritage look */
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+
+        /* Custom Scrollbar for Red Theme */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #b30000; }
+        ::-webkit-scrollbar-thumb { background: #ffcc00; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <header class="h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-[#8b0000] to-[#b30000]">
+        <h1 data-aos="zoom-out" data-aos-duration="1500" class="text-6xl md:text-8xl font-black tracking-tighter mb-4 text-white">
+            SD <span class="text-yellow-400">MOMENTS</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="500" class="text-white opacity-80 tracking-[0.5em] uppercase text-sm font-bold">
+            A Legacy in Every Frame
+        </p>
+        <div data-aos="fade-up" data-aos-delay="800" class="mt-10 animate-bounce">
+            <span class="text-white text-3xl">↓</span>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="gallery-card relative overflow-hidden rounded-2xl shadow-xl" data-aos="fade-up">
+                <img src="SD Images/moment01.jpeg.jpeg" alt="Moment 1" class="w-full h-[450px] object-cover">
+                <div class="absolute bottom-0 p-8 w-full bg-gradient-to-t from-black/80 to-transparent">
+                    <h2 class="text-2xl font-bold text-white">The Foundation</h2>
+                    <p class="text-yellow-400 font-bold uppercase tracking-widest text-xs mt-1">Adve Kankanaguttu</p>
+                </div>
+            </div>
+
+            <div class="gallery-card relative overflow-hidden rounded-2xl shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                <img src="SD Images/moment02.jpeg.jpeg" alt="Moment 2" class="w-full h-[450px] object-cover">
+                <div class="absolute bottom-0 p-8 w-full bg-gradient-to-t from-black/80 to-transparent">
+                    <h2 class="text-2xl font-bold text-white">SD Heritage</h2>
+                    <p class="text-yellow-400 font-bold uppercase tracking-widest text-xs mt-1">Established 1999</p>
+                </div>
+            </div>
+
+            <div class="gallery-card relative overflow-hidden rounded-2xl shadow-xl" data-aos="fade-up" data-aos-delay="400">
+                <img src="SD Images/moment03.jpeg.jpeg" alt="Moment 3" class="w-full h-[450px] object-cover">
+                <div class="absolute bottom-0 p-8 w-full bg-gradient-to-t from-black/80 to-transparent">
+                    <h2 class="text-2xl font-bold text-white">Family Bonds</h2>
+                    <p class="text-yellow-400 font-bold uppercase tracking-widest text-xs mt-1">Kaup, India</p>
+                </div>
+            </div>
+
+            <div class="gallery-card relative overflow-hidden rounded-2xl shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                <img src="SD Images/moment04.jpeg.jpeg" alt="Moment 2" class="w-full h-[450px] object-cover">
+                <div class="absolute bottom-0 p-8 w-full bg-gradient-to-t from-black/80 to-transparent">
+                    <h2 class="text-2xl font-bold text-white">SD Heritage</h2>
+                    <p class="text-yellow-400 font-bold uppercase tracking-widest text-xs mt-1">Established 1999</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="p-8 text-center border-t border-white/5">
+        <p class="text-[10px] text-white/20 uppercase tracking-[1em]">&copy; 2026 SD CHICKEN KAUP</p>
+        <br>
+        <p class="text-xs text-white/40">
+                Developed with ❤️ by <a href="https://www.instagram.com/adishe77y?igsh=cDN5c2NxNzVneG8w" class="hover:text-yellow-400 transition-colors">@adishe77y</a>
+        </p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+    </script>
+</body>
+</html>
